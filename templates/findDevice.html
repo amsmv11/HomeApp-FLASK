@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+                    <html>
+                    		<head>
+                    			<title>Find Device</title> 
+                                   <meta charset="utf-8"> 
+                                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+                                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+                                    <!--
+                                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MDdH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+                                    -->
+                                    <!-- <link rel="stylesheet" href="style.css"> -->
+                                    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+
+                                    
+                    		</head>
+                           <body>
+                    <div id="fullscreen_intro"> 
+                                        <div class="landing-text"> <h1>Localizacao dos carros:</h1>
+                    <br>
+                    {% for id,car,street in list %}
+                        <h2><p> {{car}} - {{street}}</p></h2>
+                    {%endfor%}
+
+<!--
+                    <?php 
+                        $servername = "localhost";
+                        $dbname = "homeapp2";
+                        $username = "root";
+                        $password = "rootroot";
+                        
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        // Check connection
+                        if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                        }
+
+                        $sql = "SELECT carro, rua FROM locais";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo "<h2><p>" . $row["carro"]. " - " . $row["rua"].  "</p></h2>";
+                        }
+                        } else {
+                        echo "0 results";
+                        }
+                        $conn->close();
+
+                        //header('Location: index.html');
+                    
+                    
+                    // while(rs.next()){
+                    //     RESULTADO = rs.getString("car;
+                    //     <br><h2><p><b>"  RESULTADO  "</b>;
+
+                    //     RESULTADO = rs.getString("street;
+                    //     RESULTADO = StringEscapeUtils.escapeHtml4(RESULTADO);
+                    //     <br>rua: "  RESULTADO);
+
+                    //     RESULTADO = rs.getString("reg_date;
+                    //     <br>no dia: "  RESULTADO  "</p></h2> <br>;
+                    
+                    ?>-->
+                    <a href= {{ url_for("index") }}> 
+                                                <button type="button" class="btn btn-light car-btn">Voltar</button></a>
+                            			 </div></div>
+                           </body>
+                    </html>

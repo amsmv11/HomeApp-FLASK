@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Device</title> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href= {{ url_for('static', filename="style.css") }}>                                
+</head>
+<body>
+    <div id="fullscreen_shopping"> 
+        <div class="landing-text"> <h1>Lista de Compras:</h1>
+            <form action= {{ url_for("shoppingList")}} method="POST">
+                <input type="text" name="item_to_add" placeholder="Adicionar itens..." />
+                <input type="submit" value="Submit" />
+            </form>
+            {%for id,name in list%}
+            <p><h2> {{name}}  
+                <form action= {{ url_for("shoppingListRemove") }} method="POST"> 
+                    <button name="item_to_remove" type="submit" value='{{name}}'  class="btn btn-danger removeButton">X</button>
+                </form>
+            </h2></p>
+            {%endfor%}
+            <!-- <?php 
+                $servername = "localhost";
+                $dbname = "homeapp2";
+                $username = "root";
+                $password = "rootroot";
+                
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT item FROM shoppinglist";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<p><h2>" . $row["item"].  "<form action=\"removeFromShoppinglist.php\" method=\"POST\"> <button name=\"item_to_remove\" type=\"submit\" value=\" " . $row["item"]. " \" class=\"btn btn-danger removeButton\">X</button></form></h2></p>";
+                }
+                } else {
+                echo "<h2><p>0 results</p></h2>";
+                }
+                $conn->close();
+            ?> -->
+            <br>
+            <a href= {{ url_for("index") }}> 
+                <button type="button" class="btn btn-light car-btn">Voltar</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+

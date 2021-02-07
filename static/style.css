@@ -1,0 +1,59 @@
+#fullscreen_intro{
+    background: url(https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg) no-repeat center center fixed;
+    /*background: url(https://images.unsplash.com/photo-1497656387909-356336b9455f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80) no-repeat center center fixed;*/
+    display: table;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+#fullscreen_shopping{
+    background: url(https://cdn.hipwallpaper.com/m/35/78/jhYV6A.jpg) no-repeat center center fixed;
+    /*background: url(https://images.unsplash.com/photo-1497656387909-356336b9455f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80) no-repeat center center fixed;*/
+    display: table;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+#fullscreen_voz{
+    background: url(https://images.unsplash.com/photo-1561365789-e4cd39d6b21c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=754&q=80) no-repeat center center fixed;
+    display: table;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.landing-text { 
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+.car-btn{
+    background-color: white;
+    border-width: 2px;
+    border-color: rgb(78, 76, 76);
+    border-radius: 12px;
+    width: 6rem;
+}
+.car-btn:hover{
+    background-color: rgb(78, 76, 76);
+    border-color:rgb(78, 76, 76);
+    color: beige;
+}
+    body {background-color:darkslategrey;}
+
+form, table {
+    display:inline;
+    margin:0px;
+    padding:0px;
+}
+.removeButton{
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}

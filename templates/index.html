@@ -1,0 +1,102 @@
+<!--
+<html>
+<body>
+<h2>Hello World!</h2>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+ 	<head>
+        <title>HomeApp</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href= {{ url_for('static', filename='style.css') }}>
+        <link rel="shortcut icon" href="https://w7.pngwing.com/pngs/834/28/png-transparent-emoji-car-emoticon-text-messaging-campervans-vehicle.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    </head>
+    <body>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">HomeApp</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#fullscreen_intro">Localizacao dos Carros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#fullscreen_shopping">Lista de Compras</a>
+              </li>
+   <!--           <li class="nav-item">
+                <a class="nav-link" href="#fullscreen_voz">Recados por Voz</span></a>
+              </li>
+       -->       <li class="nav-item">
+                <a class="nav-link" href="#">Recados <span>&#9888;</span></a>
+              </li>
+
+
+              <!--<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>-->
+
+
+            </ul>
+          </div>
+    </nav>
+
+
+        <div id="fullscreen_intro">
+            <div class="landing-text">
+                <!--<h1>Guardar Localizacao do carro</h1><a href="saveLocation.html">-->
+                <h1>Guardar Localizacao do carro</h1><a href= {{ url_for("saveLocation") }}>
+                    <button type="button" class="btn btn-light car-btn">Guardar</button></a>
+                <br><br><br>
+                <!-- <h1>Encontrar carro</h1><a href="findDevice.php"> -->
+                <h1>Encontrar carro</h1><a href= {{ url_for("findDevice") }}>
+                    <button type="button" class="btn btn-light car-btn">Encontrar</button></a>
+            </div>
+        </div>
+
+
+        <div id="fullscreen_shopping">
+          <div class="landing-text">
+              <h1>Lista de Compras</h1>
+                <a href= {{ url_for("shoppingList") }}>
+                  <button type="button" class="btn btn-light car-btn">Entrar</button>
+                </a>
+              <br><br><br>
+          </div>
+        </div>
+
+<!--        <div id="fullscreen_voz">
+          <div class="landing-text">
+              <h1>Escrever mensagem de Voz:</h1>
+              <form action="text_to_speech.php" method="POST"> 
+                <input type="text" name="texto" />
+                <input type="submit" value="Submit" />
+              </form>
+              <a href="http://192.168.1.208:8000/test"><p>Link para HUG</p></a>
+              <br><br><br>
+          </div>
+        </div>
+-->
+        
+    </body>
+</html>
