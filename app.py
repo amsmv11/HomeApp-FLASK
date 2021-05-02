@@ -101,6 +101,10 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/f1')
+def f1():
+    return render_template('f1.html')
+
 @app.route('/saveLocation', methods=['GET', 'POST'])
 def saveLocation():
     if request.method == "GET":
